@@ -1,0 +1,379 @@
+{
+  "navbar": {
+    "brand": "Stars Academy",
+    "about": "About",
+    "pricing": "Pricing",
+    "stars": "Stars",
+    "programs": "Programs",
+    "join": "Join Us"
+  },
+  "hero": {
+    "badge": "Certified Academy",
+    "title": "Create The Next Football Star",
+    "desc": "Professional training for kids from 6 to 16 years old supervised by professional coaches",
+    "join": "Book Free Trial",
+    "whatsapp": "WhatsApp",
+    "players": "Players",
+    "coaches": "Coaches",
+    "championships": "Championships",
+    "plan": "Inquiry",
+    "search": {
+      "title": "Search Player Report",
+      "placeholder": "Enter Player Code",
+      "enterCode": "Enter Player Code",
+      "notFound": "Player Not Found",
+      "checkCode": "Please check the player code",
+      "error": "Error",
+      "failed": "Unable to search for the player"
+    }
+  },
+  "about": {
+    "title": "Invest In Your Child's Future",
+    "subtitle": "About Stars Academy",
+    "desc1": "At Stars Academy, we believe in the passion of football and every child's ability to shine. We provide carefully designed training programs for players of all skill levels, from beginners to advanced players.",
+    "desc2": "Our players are trained by professional coaches with extensive experience in coaching children, while also teaching important values such as teamwork, discipline, and self-respect.",
+    "desc3": "We aim to create a positive and enjoyable environment that encourages learning and growth. We believe football is more than just a game — it is a tool for building character and developing life skills."
+  },
+  "features": {
+    "card1": {
+      "title": "Professional Coaches",
+      "desc": "Experienced in training children"
+    },
+    "card2": {
+      "title": "Safe Environment",
+      "desc": "Children's safety is our priority"
+    },
+    "card3": {
+      "title": "Modern Training",
+      "desc": "Using the latest training methods"
+    }
+  },
+  "pricing": {
+    "title": "Pricing Plans",
+    "desc": "We offer flexible plans suitable for all families and believe everyone deserves the opportunity to join.",
+    "heading": "Don't wait any longer, start your child's journey to success!",
+    "currency": "EGP",
+    "button": "Subscribe",
+    "quote": "Nothing is impossible in football, you just have to believe in yourself.",
+    "cards": {
+      "monthly": {
+        "title": "Monthly Payment",
+        "duration": "Per Month",
+        "desc": "Split the program cost into affordable monthly installments.",
+        "plan": "Monthly"
+      },
+      "quarterly": {
+        "title": "Quarterly Payment",
+        "duration": "Every 3 Months",
+        "desc": "Perfect for families who prefer paying every 3 months.",
+        "plan": "Quarterly"
+      },
+      "halfyear": {
+        "title": "Half-Year Payment",
+        "duration": "Every 6 Months",
+        "desc": "Ideal for families who prefer larger payments every 6 months.",
+        "plan": "Half-Year"
+      }
+    }
+  },
+  "players": {
+    "title": "Academy Stars",
+
+    "cards": {
+
+      "player1": {
+        "name": "Fahd Abdulaziz",
+        "role": "Midfielder"
+      },
+
+      "player2": {
+        "name": "Nabil Ammar",
+        "role": "Striker"
+      },
+
+      "player3": {
+        "name": "Faris Mahmoud",
+        "role": "Midfielder"
+      },
+
+      "player4": {
+        "name": "Khaled Mohamed",
+        "role": "Defender"
+      },
+
+      "player5": {
+        "name": "Mohamed Ali",
+        "role": "Goalkeeper"
+      },
+
+      "player6": {
+        "name": "Ahmed Sobhy",
+        "role": "Defender"
+      },
+
+      "player7": {
+        "name": "Mahmoud Hassan",
+        "role": "Striker"
+      },
+
+      "player8": {
+        "name": "Abdelrahman Mohamed",
+        "role": "Midfielder"
+      }
+
+    }
+  },
+  "programs": {
+    "program1": {
+      "title": "Fitness Training",
+      "desc": "Our specialized programs include:",
+      "btn": "Register Your Child Now",
+      "points": [
+        "A professional team of experienced fitness coaches.",
+        "We use the latest scientific and training methods.",
+        "Programs suitable for all age groups and fitness levels.",
+        "We focus on gradual training and player safety.",
+        "Healthy nutrition plans that support physical training."
+      ]
+    },
+
+    "program2": {
+      "title": "Mental & Technical Training",
+      "desc": "Our programs aim to:",
+      "btn": "Join Now",
+      "points": [
+        "Improve heart and respiratory health.",
+        "Strengthen muscles and improve fitness.",
+        "Maintain a healthy weight and fight obesity.",
+        "Support bone health and reduce injury risks.",
+        "Boost confidence and reduce stress."
+      ]
+    },
+
+    "program3": {
+      "title": "Strength & Discipline Training",
+      "desc": "With our fitness programs, you will:",
+      "btn": "Invest in Your Child's Future",
+      "points": [
+        "Reach your maximum football potential.",
+        "Build a healthy and strong body.",
+        "Increase self-confidence and motivation.",
+        "Live a healthier and more active lifestyle.",
+        "Start your journey toward fitness and success today."
+      ]
+    }
+  },
+  "stats": {
+    "heading": "Stars Academy Numbers",
+    "description": "Since its establishment in 2022, the academy has been keen on developing football talents, believing that every child has a talent worth developing.",
+    "btn": "Join Now",
+    "coach": "Professional Coach",
+    "technical": "Technical",
+    "trophies": "Championships",
+    "player": "Professional Player"
+  },
+  "footer": {
+    "brand": "Stars Academy",
+    "country": "Egypt",
+    "address": "Cairo - Nasr City",
+    "newsletter_title": "Get Our Latest News",
+    "subscribe": "Subscribe",
+    "privacy": "Privacy Policy",
+    "payment_policy": "Payment Policy",
+    "rights": "All Rights Reserved © 2026"
+  },
+  "join": {
+    "trial_title": "Book a Free Trial ⚽",
+    "join_title": "Join the Academy ⚽",
+    "name_placeholder": "Player Name",
+    "age_placeholder": "Age",
+    "phone_placeholder": "Guardian Phone",
+    "send": "Send",
+    "error_msg": "Please fill in all data",
+    "wa_request": "New Request ⚽",
+    "wa_name": "Name",
+    "wa_age": "Age",
+    "wa_phone": "Phone",
+    "wa_plan": "Plan"
+  },
+  "report": {
+    "page": {
+      "loadingReport": "Loading report...",
+      "playerNotFound": "Player not found",
+      "playerNotFoundDescription": "Please verify the player code and try again"
+    },
+    "playerInfo": {
+      "loading": "Loading player data...",
+      "notFound": "Player not found",
+      "coach": "Coach",
+      "ageCategory": "Age Category",
+      "position": "Position",
+      "playerCode": "Player Code",
+      "years": "Years",
+      "player": "Player",
+      "positions": {
+        "forward": "Forward",
+        "defender": "Defender",
+        "midfielder": "Midfielder",
+        "goalkeeper": "Goalkeeper"
+    }
+    },
+    "coachNotes": {
+      "title": "Coach Notes",
+      "loading": "Loading notes...",
+      "empty": "No coach notes available yet."
+    }, 
+      "comparePlayers": {
+      "title": "Players Comparison",
+      "loading": "Loading data...",
+      "currentPlayer": "Player",
+      "academyAverage": "Academy Average",
+      "bestScore": "Best Score",
+      "lowestScore": "Lowest Score"
+    },
+    "evaluationsTable": {
+      "loading": "Loading evaluations...",
+      "title": "Evaluation History",
+      "date": "Date",
+      "coach": "Coach",
+      "totalScore": "Overall Score",
+      "technical": "Technical Skills",
+      "fitness": "Physical Fitness",
+      "mental": "Mental & Discipline",
+      "viewReport": "View Report",
+      "noEvaluations": "No evaluations available",
+      "tipLabel": "Tip: ",
+      "tipText": "Keep training consistently to improve weaknesses and enhance the player's overall performance."
+    },
+    "evolutionChart": {
+      "title": "Performance Evolution",
+      "loading": "Loading data...",
+      "noData": "No data available",
+      "technicalSkills": "Technical Skills",
+      "physicalFitness": "Physical Fitness",
+      "mentalDiscipline": "Mental & Discipline"
+    },
+    "overall": {
+        "title": "Overall Rating",
+        "loading": "Loading rating...",
+        "outOf100": "out of 100",
+        "excellent": "Excellent ⭐",
+        "veryGood": "Very Good 🔥",
+        "good": "Good 👍",
+        "weak": "Needs Improvement ⚠️"
+    },
+    "performanceChart": {
+        "title": "Overall Performance Progress",
+        "loading": "Loading data...",
+        "noData": "No evaluations available yet",
+        "score": "Score"
+    },
+    "quickStats": {
+        "loading": "Loading statistics...",
+        "performanceGrowth": "Performance Growth",
+        "lastEvaluation": "Latest Evaluation",
+        "bestEvaluation": "Best Evaluation",
+        "totalEvaluations": "Total Evaluations",
+        "evaluations": "Evaluations",
+        "improved": "Overall Improvement",
+        "decreased": "Performance Declined",
+        "noData": "No Data Available"
+    },
+      "radarSkills": {
+        "title": "Skills Performance",
+        "loading": "Loading data...",
+        "score": "Score",
+
+        "shooting": "Shooting",
+        "dribbling": "Dribbling",
+        "speed": "Speed",
+        "footballIQ": "Football IQ",
+        "agility": "Agility",
+        "skillPerformance": "Skill Performance",
+
+        "passing": "Passing",
+        "longVision": "Long Passing Vision",
+        "endurance": "Endurance",
+        "decisionMaking": "Decision Making",
+        "teamwork": "Teamwork",
+
+        "strength": "Strength",
+        "focus": "Focus",
+        "discipline": "Discipline",
+        "balance": "Balance & Coordination",
+
+        "leadership": "Leadership"
+    
+
+    },
+    "skillsOverview": {
+      "title": "Player Performance Report",
+      "subtitle": "Complete analysis of player skills",
+
+      "technical": "Technical Skills",
+      "fitness": "Physical Fitness",
+      "mental": "Mental & Discipline",
+
+      "showAll": "Show all {{count}} skills",
+      "showLess": "Show less",
+
+      "strengths": "Strengths",
+      "weaknesses": "Needs Improvement",
+      "summary": "Skills Summary",
+
+      "loading": "Loading skills...",
+
+      "technicalSummary": "Technical Skills",
+      "fitnessSummary": "Physical Fitness",
+      "mentalSummary": "Mental & Discipline",
+
+      "excellent": "Excellent",
+      "veryGood": "Very Good",
+      "good": "Good",
+      "acceptable": "Average",
+      "weak": "Weak"
+    },
+    "skills": {
+      "receivePass": "First Touch & Passing",
+      "passing": "Passing",
+      "shooting": "Shooting",
+      "dribbling": "Dribbling",
+      "vision": "Vision & Long Passing",
+      "technicalPerformance": "Technical Performance",
+
+      "strength": "Strength",
+      "endurance": "Endurance",
+      "speed": "Speed",
+      "agility": "Agility",
+      "balance": "Balance & Coordination",
+      "coordination": "Motor Coordination",
+
+      "teamwork": "Teamwork",
+      "decisionMaking": "Decision Making",
+      "focus": "Focus",
+      "footballIQ": "Football Intelligence",
+      "discipline": "Discipline",
+      "leadership": "Leadership"
+    },
+    "actions": {
+      "home": "Home",
+      "whatsapp": "WhatsApp",
+      "share": "Share",
+      "copyLink": "Copy Link",
+
+      "shareTitle": "Player Report",
+      "shareText": "Player Evaluation Report",
+      "shareWhatsappTitle": "⚽ Player Report",
+
+      "linkCopied": "Link copied successfully"
+    },
+    "compare": {
+      "title": "Player Comparison",
+      "loading": "Loading data...",
+      "player": "Player",
+      "academyAverage": "Academy Average",
+      "bestScore": "Best Score",
+      "lowestScore": "Lowest Score"
+    } 
+  }
+}

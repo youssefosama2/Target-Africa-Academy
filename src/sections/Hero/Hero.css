@@ -1,0 +1,246 @@
+.hero {
+  min-height: 100vh;
+  background: url("/assets/img/front-view-football-trainer-teaching-kids-field_23-2149742029.webp") center top/cover;
+  position: relative;
+  padding-top: 100px;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+.hero-stats h4 {
+  font-weight: bold;
+}
+.player-search-box {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.search-input {
+  max-width: 450px;
+  min-height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+}
+
+.search-input::placeholder {
+  color: #fff;
+}
+.search-input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  box-shadow: none;
+}
+
+.btn-search-custom {
+  background-color: #2563eb !important; 
+  border: none !important;
+  border-radius: 50% !important; 
+  width: 45px !important;     
+  height: 45px !important;    
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: transform 0.2s ease !important;
+}
+
+.btn-search-custom:hover {
+  transform: scale(1.1); 
+  background-color: #1d4ed8 !important;
+}
+
+/* ===== SweetAlert Custom ===== */
+
+.swal-popup {
+  border-radius: 16px !important;
+  padding: 10px !important;
+}
+
+.swal-player-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  direction: rtl;
+  font-family: "Cairo", sans-serif;
+}
+
+.swal-image-wrapper {
+  text-align: center;
+}
+
+.swal-image-picker {
+  width: 110px;
+  height: 110px;
+  margin: auto;
+  border-radius: 50%;
+  border: 2px dashed #cbd5e1;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.swal-image-picker:hover {
+  border-color: #1d4ed8;
+}
+
+.swal-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.swal-placeholder {
+  font-size: 32px;
+  color: #94a3b8;
+}
+
+.swal-plus {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  width: 26px;
+  height: 26px;
+  background: #1d4ed8;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.swal-hint {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 5px;
+}
+
+.swal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.swal-grid input,
+.swal-grid select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  outline: none;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.swal-grid input:focus,
+.swal-grid select:focus {
+  border-color: #1d4ed8;
+  box-shadow: 0 0 0 2px rgba(29, 78, 216, 0.1);
+}
+.swal-grid textarea {
+  grid-column: span 1; /* تأخذ عموداً واحداً فقط بجانب رقم الهاتف */
+  grid-row: span 1;    /* تأخذ سطراً واحداً فقط ولا تمتد لأسفل */
+  height: 42px;        /* نفس طول حقل رقم الهاتف وبقية الـ inputs بالضبط */
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  outline: none;
+  font-size: 13px;
+  font-family: "Cairo", sans-serif;
+  resize: none;        /* يمنع المستخدم من مط الحقل وتخريب التصميم */
+  box-sizing: border-box;
+  transition: 0.2s;
+  overflow: hidden;    /* يخفي شريط التمرير ليظل كأنه حقل سطر واحد */
+}
+
+.swal-grid textarea:focus {
+  border-color: #1d4ed8;
+  box-shadow: 0 0 0 2px rgba(29, 78, 216, 0.1);
+}
+
+.swal-grid input[type="date"] {
+  cursor: pointer;
+}
+
+.swal-grid input::placeholder,
+.swal-grid textarea::placeholder {
+  color: #94a3b8;
+}
+.swal2-actions{
+  justify-content: center !important;
+  margin-top: 0 !important;
+}
+.swal2-actions .swal2-cancel{
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 10px 30px !important;
+  font-weight: 700 !important;
+}
+.swal-full-width {
+  grid-column: 1 / -1;
+}
+@media (max-width: 576px) {
+  .swal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .swal-popup {
+    width: calc(100% - 30px) !important;
+  }
+}
+@media (max-width: 576px) {
+  .swal-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* اضف هذا السطر لحل مشكلة التمدد على الموبايل */
+  .swal-grid textarea {
+    grid-row: auto; 
+    height: 90px;
+  }
+
+  .swal-popup {
+    width: calc(100% - 30px) !important;
+  }
+}
+.swal-player-form input[type="date"] {
+    direction: rtl;
+    text-align: right;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.swal-player-form input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(0.3); 
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.swal-player-form input[type="date"]:focus {
+    border-color: #0d6efd;
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}

@@ -1,0 +1,23 @@
+/* ================= player  ================= */
+.player-card img {
+    width: 100%;
+    aspect-ratio: 3/4; 
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 20px;
+}
+.player-card:hover img {
+    transform: scale(1.05);
+}
+.slider-controls button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 768px) {
+    .player-card h5 {
+        font-size: 0.9rem;
+    }
+}

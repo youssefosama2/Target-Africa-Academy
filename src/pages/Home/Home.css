@@ -1,0 +1,66 @@
+/* ================= SweetAlert Form ================= */
+body.swal2-shown {
+  padding-right: 0 !important;
+  overflow: auto !important;
+}
+body.swal2-height-auto {
+  height: auto !important;
+}
+.swal2-popup {
+  border-radius: 20px !important;
+  font-family: 'Cairo', sans-serif;
+  padding: 25px 20px;
+}
+.swal2-title {
+  font-size: 22px !important;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.swal2-input {
+  width: 100% !important;
+  margin: 10px 0 !important;
+  padding: 12px 15px !important;
+  border-radius: 10px !important;
+  border: 1px solid #ddd !important;
+  font-size: 14px;
+  text-align: start; 
+  direction: inherit; 
+  transition: 0.3s;
+}
+.swal2-input:focus {
+  border-color: var(--main-color) !important;
+  box-shadow: 0 0 5px rgba(59, 113, 254, 0.2) !important;
+}
+.swal2-input:focus {
+  border-color: #3b71fe !important;
+  box-shadow: 0 0 0 3px rgba(59, 113, 254, 0.2) !important;
+}
+.swal2-confirm {
+  background-color: var(--main-color); 
+  border-radius: 10px !important;
+  padding: 10px 25px !important;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.swal2-confirm:hover {
+  background-color: var(--main-color);
+}
+.swal2-validation-message {
+  font-size: 13px;
+  border-radius: 8px;
+  margin: 0 25px;
+}
+.swal2-show {
+  animation: fadeInUp 0.4s ease;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

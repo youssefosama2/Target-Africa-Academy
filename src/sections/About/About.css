@@ -1,0 +1,50 @@
+.About {
+  background-color: var(--bg-color);
+  padding: 20px 60px;
+}
+.About img {
+  border-radius: 50px;
+  margin-top: 15px;
+}
+.About h3 {
+  font-size: 35px;
+  font-weight: 700;
+}
+.About p {
+  font-size: 18px;
+  margin-top: 20px;
+}
+@media (max-width: 992px) {
+  .About {
+    padding: 0 20px;
+  }
+  .About img {
+    width: 100%;
+  }
+  .About h3 {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .About p {
+    font-size: 14px;
+  }
+}
+/* ================= features ================= */
+.feature-card {
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.feature-card i {
+  font-size: 30px;
+  color: var(--main-color);;
+  margin-bottom: 10px;
+}
+.features h3{
+    font-weight: 700;
+}
+.features p{
+    font-size: 16px;
+    font-weight: 500;
+}

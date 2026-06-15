@@ -1,0 +1,84 @@
+
+/* ================= pricing ================= */
+.pricing-section{
+    background-color: #EEF2F5;
+}
+.pricing-section p{
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.pricing-card{
+    border: 2px solid #dee2e6;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, shadow 0.3s ease;
+}
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+.price-box {
+    text-align: start;
+}
+.price {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #000;
+}
+.currency {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-right: 2px;
+}
+.duration {
+    font-size: 0.75rem;
+    color: #6c757d;
+    margin-top: -5px;
+}
+.card-info {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: start;
+}
+.btn-primary-custom {
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 8px 0;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.btn-primary-custom:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+@media (max-width: 768px) {
+    .pricing-card h5 {
+        font-size: 1.1rem;
+    }
+    .price {
+        font-size: 1.5rem;
+    }
+}
+/* ================= quote ================= */
+.quote-section{
+  background-color: #FDFBFC;
+}
+.quote-section h2 {
+    font-family: 'Cairo', sans-serif; 
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-weight: 700;
+    padding: 40px 0;
+
+}
+@media (max-width: 768px) {
+    .quote-section h2 {
+        font-size: 1.8rem;
+    }
+}

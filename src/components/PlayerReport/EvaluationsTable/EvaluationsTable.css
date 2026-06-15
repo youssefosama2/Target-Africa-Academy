@@ -1,0 +1,102 @@
+.evaluations-container {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 24px;
+    font-family: sans-serif;
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.custom-table th {
+    padding: 18px 15px;
+    background-color: #f8faff;
+    border-bottom: 2px solid #f1f5f9;
+    color: #000000 !important; 
+    font-weight: 700;
+}
+
+.custom-table td {
+    padding: 16px 15px;
+    color: #64748b;
+    border-bottom: 1px solid #f1f5f9;
+    text-align: center;
+}
+
+.view-report-btn {
+    background: #eff6ff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    color: #4318ff;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .custom-table thead {
+        display: none;
+    }
+
+    .hide-text-mobile {
+        display: none !important;
+    }
+
+    .custom-table tr {
+        display: block;
+        border: 1px solid #e2e8f0;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        background: #fff;
+        padding: 10px;
+    }
+
+    .custom-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px;
+        border-bottom: 1px solid #f8fafc;
+    }
+    .custom-table td::before {
+        content: attr(data-label);
+        color: #000000 !important;
+        font-weight: 700;
+    }
+    .action-cell {
+        display: block !important;
+        border-bottom: none !important;
+        padding: 15px 10px 5px !important;
+    }
+    .action-cell::before {
+        display: none !important;
+    }
+
+    .view-report-btn {
+        width: 100%;
+        justify-content: center;
+        background: #4318ff;
+        color: #ffffff;
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
+
+.table-header {  margin-bottom: 20px; }
+.table-header .title-wrapper { display: flex; align-items: center; gap: 10px; font-weight: bold; color: #000; }
+.table-header .header-icon { color: #4318FF; font-size: 20px; }
+.table-header h3 { margin: 0; }
+.table-footer { 
+    background: #f8faff; padding: 15px; border-radius: 12px; margin-top: 20px;
+    display: flex; align-items: center; gap: 10px; border: 1px solid #e2e8f0;
+}
+.table-footer p { margin: 0; }
+.table-footer .info-icon { color: #4318FF; }
+.table-footer .tip-label { font-weight: 800; color: #000; }

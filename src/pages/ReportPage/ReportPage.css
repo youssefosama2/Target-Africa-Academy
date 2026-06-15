@@ -1,0 +1,341 @@
+/* =========================================
+   RESET
+========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap');
+
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.dashboard{
+  display: flex;
+  background: #f4f7fe;
+  overflow-x: hidden;
+}
+
+.main-content{
+  width: 100%;
+  padding: 25px;
+}
+
+@media(max-width:768px){
+
+  .main-content{
+    padding: 12px;
+  }
+
+}
+
+/* =========================================
+   GLOBAL CARDS
+========================================= */
+
+.dashboard-card,
+.stat-card{
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.05);
+}
+
+.dashboard-card{
+  height: 100%;
+}
+
+.section-title{
+  font-size: 16px;
+  font-weight: 800;
+  color: #1b2559;
+  margin-bottom: 20px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:768px){
+
+  .dashboard-card,
+  .stat-card{
+    padding: 15px;
+  }
+
+  .section-title{
+    font-size: 14px;
+  }
+
+}
+
+/* =========================
+   REPORT PAGE
+========================= */
+
+.report-page{
+  padding: 20px 0;
+  overflow-x: hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.report-header{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.report-actions{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-pdf,
+.btn-whatsapp{
+  border: none;
+  height: 45px;
+  padding: 0 18px;
+  border-radius: 14px;
+  font-family: "Cairo", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn-pdf{
+  background: #ff4d4f;
+  color: white;
+}
+
+.btn-whatsapp{
+  background: #22c55e;
+  color: white;
+}
+
+.btn-pdf:hover,
+.btn-whatsapp:hover{
+  transform: translateY(-2px);
+}
+
+/* =========================
+   GRID LAYOUTS
+========================= */
+
+.charts-grid{
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.bottom-grid-new{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+  align-items: start;
+}
+
+.side-column{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* =========================
+   SHARED CARDS
+========================= */
+
+.chart-card,
+.compare-card,
+.notes-card-new,
+.total-score-card,
+.table-card{
+  background: #fff;
+  border-radius: 24px;
+  padding: 22px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+}
+
+/* =========================
+   CHARTS
+========================= */
+
+.chart-card{
+  overflow: hidden;
+}
+
+.chart-card h3,
+.compare-card h3,
+.table-card h3{
+  color: #1B2559;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.evolution-card{
+  overflow: hidden;
+  min-height: 380px;
+}
+
+.recharts-text{
+  font-size: 11px !important;
+}
+
+.recharts-polar-angle-axis text{
+  font-size: 10px !important;
+  font-weight: 600;
+  fill: #475569;
+}
+
+.recharts-default-legend{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* =========================
+   COMPARE CARD
+========================= */
+
+.compare-item{
+  margin-bottom: 22px;
+}
+
+.compare-item:last-child{
+  margin-bottom: 0;
+}
+
+.compare-top{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.compare-top span{
+  color: #1B2559;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.compare-progress{
+  width: 100%;
+  height: 10px;
+  background: #edf2f7;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.compare-progress div{
+  height: 100%;
+  border-radius: 999px;
+}
+
+/* =========================
+   NOTES
+========================= */
+
+.notes-header{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.notes-icon{
+  color: #2563ff;
+  font-size: 22px;
+}
+
+.notes-card-new p{
+  line-height: 2;
+  color: #4a5568;
+  font-size: 15px;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.table-responsive{
+  overflow-x: hidden;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead{
+  background: #f8fbff;
+}
+
+th,
+td{
+  padding: 16px;
+  text-align: center;
+  border-bottom: 1px solid #eef2ff;
+}
+
+th{
+  color: #1B2559;
+}
+
+td{
+  color: #4a5568;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1200px){
+
+  .charts-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .bottom-grid-new{
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .report-page{
+    padding: 14px 0;
+  }
+
+  .charts-grid{
+    grid-template-columns: 1fr !important;
+  }
+
+  .bottom-grid-new{
+    grid-template-columns: 1fr !important;
+  }
+
+  .evolution-card{
+    height: 320px;
+  }
+
+  .recharts-text{
+    font-size: 9px !important;
+  }
+
+  .recharts-polar-angle-axis text{
+    font-size: 8px !important;
+  }
+
+  .report-actions{
+    justify-content: center;
+  }
+
+  .recharts-default-legend{
+    display: none;
+  }
+
+}

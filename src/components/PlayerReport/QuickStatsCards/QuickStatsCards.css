@@ -1,0 +1,56 @@
+/* =========================
+   STATS
+========================= */
+
+.stats-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.stat-card{
+  background: white;
+  border-radius: 22px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 120px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+}
+
+.stat-card p{
+  color: #A3AED0;
+  margin-bottom: 10px;
+}
+
+.stat-card h2{
+  color: #1B2559;
+  margin-bottom: 5px;
+  font-size: 28px;
+}
+
+.green-text{
+  color: #22c55e !important;
+}
+.red-text{
+  color: #EF4444 !important;
+}
+
+.stat-card span{
+  color: #A3AED0;
+  font-size: 13px;
+}
+
+.stat-icon{
+  width: 55px;
+  height: 55px;
+  border-radius: 16px;
+  background: #eef4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563ff;
+  font-size: 20px;
+}

@@ -1,0 +1,92 @@
+.navbar h3  {
+  font-size: 22px;
+  margin-left: 10px;
+  font-weight: 500;
+} 
+.navbar {
+  background-color: transparent !important;
+}
+.navbar img {
+  width: 80px;
+}
+.navlinks {
+  width: 100%;
+  align-items: start;
+
+}
+.navlinks a {
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: all 0.5s ease-in-out;
+}
+.navlinks a:hover {
+  color: var(--main-color);
+  transform: scale(1.1);
+}
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  background: #f1f1f1;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+  position: relative;
+  overflow: hidden;
+  padding: 8px 12px 8px 36px; 
+  transition: 0.3s;
+}
+.lang-toggle:hover {
+  background: #e6e6e6;
+  transform: scale(1.03);
+}
+.lang-toggle svg {
+  font-size: 14px;
+  display: block;
+  margin: 0;
+}
+.lang-toggle span {
+  display: block;
+  margin: 0;
+}
+.switch-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #0d6efd;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+.lang-toggle.ar {
+  padding: 8px 36px 8px 12px;
+}
+.lang-toggle.ar .switch-dot {
+  left: auto;
+  right: 10px;
+  background: #198754;
+}
+.lang-toggle,
+.lang-toggle * {
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .lang-toggle {
+    margin-top: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .navlinks {
+  align-items: center;
+  }
+}
