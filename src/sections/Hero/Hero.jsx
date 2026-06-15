@@ -83,7 +83,7 @@ const registrationFormTemplate = `
 
     <select id="player-branch">
       <option value="">اختر الفرع *</option>
-      <option value="وابور المياة">وابور المياة</option> 
+      <option value="الحريف">الحريف</option> 
     </select>
 
     <!-- نظام إدخال الهاتف الدولي المدمج -->
