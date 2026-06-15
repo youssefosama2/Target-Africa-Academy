@@ -84,6 +84,9 @@ const registrationFormTemplate = `
     <select id="player-branch">
       <option value="">اختر الفرع *</option>
       <option value="الحريف">الحريف</option> 
+      <option value="ليفربول">ليفربول</option> 
+      <option value="محسن الرياضي">محسن الرياضي</option> 
+      <option value="ميدان الساعه">ميدان الساعه</option> 
     </select>
 
     <!-- نظام إدخال الهاتف الدولي المدمج -->
