@@ -1,58 +1,73 @@
 import React, { useState, useEffect, useMemo } from "react";
-import { useTranslation } from "react-i18next";
 import { supabase } from "../../../utils/supabaseClient";
-import { useReport } from "../../../Context/ReportContext";
-import { ACADEMY_ID } from "../../../config/academy";
+import { useAcademy } from "../../../context/AcademyContext";
+import { useReport } from "../../../context/ReportContext";
+
 const ComparePlayersCard = ({ compareInView }) => {
-  const { t } = useTranslation();
+  const { academyId } = useAcademy();
   const { currentEvaluation, loading: contextLoading } = useReport();
   const [loading, setLoading] = useState(true);
   const [academyAverage, setAcademyAverage] = useState(0);
   const [bestPlayer, setBestPlayer] = useState(0);
   const [lowestPlayer, setLowestPlayer] = useState(0);
+
   useEffect(() => {
+    if (!academyId) return;
     const fetchAcademyStats = async () => {
       try {
         setLoading(true);
-        const { data: academyEvaluations, error } = await supabase.from("evaluations").select("total_score").eq("academy_id", ACADEMY_ID);
-        if (error) throw error;
-        if (academyEvaluations?.length) {
+        const { data: academyEvaluations, error: academyError } = await supabase
+          .from("evaluations")
+          .select("total_score")
+          .eq("academy_id", academyId);
+        if (academyError) throw academyError;
+        if (academyEvaluations && academyEvaluations.length > 0) {
           const scores = academyEvaluations.map((item) => Number(item.total_score) || 0);
-          setAcademyAverage(Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length));
-          setBestPlayer(Math.max(...scores));
-          setLowestPlayer(Math.min(...scores));
+          const academyAvg = Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length);
+          const best = Math.max(...scores);
+          const lowest = Math.min(...scores);
+          setAcademyAverage(academyAvg);
+          setBestPlayer(best);
+          setLowestPlayer(lowest);
         }
       } catch (err) {
-        console.error("Compare card academy stats error:", err);
+        console.error("Compare card academy stats error:", err.message);
       } finally {
         setLoading(false);
       }
     };
     fetchAcademyStats();
-  }, []);
+  }, [academyId]);
+
   const compareData = useMemo(() => {
     const playerScore = Number(currentEvaluation?.total_score) || 0;
+    const playerName = currentEvaluation?.player_name || "اللاعب";
     return [
-      { label: currentEvaluation?.player_name || t("report.compare.player"), value: playerScore, color: "#2563ff" },
-      { label: t("report.compare.academyAverage"), value: academyAverage, color: "#22c55e" },
-      { label: t("report.compare.bestScore"), value: bestPlayer, color: "#9333ea" },
-      { label: t("report.compare.lowestScore"), value: lowestPlayer, color: "#ef4444" }
+      { label: playerName, value: playerScore, color: "#2563ff" },
+      { label: "متوسط الأكاديمية", value: academyAverage, color: "#22c55e" },
+      { label: "أفضل تقييم", value: bestPlayer, color: "#9333ea" },
+      { label: "أقل تقييم", value: lowestPlayer, color: "#ef4444" }
     ];
-  }, [currentEvaluation, academyAverage, bestPlayer, lowestPlayer, t]);
+  }, [currentEvaluation, academyAverage, bestPlayer, lowestPlayer]);
+
   const isPageLoading = contextLoading || loading;
+
   return (
     <div className="compare-card h-100">
-      <h3>{t("report.compare.title")}</h3>
+      <h3>مقارنة اللاعبين</h3>
       {isPageLoading ? (
         <div style={{ height: "250px", display: "flex", alignItems: "center", justifyContent: "center", color: "#64748b", fontWeight: "600" }}>
-          {t("report.compare.loading")}
+          جاري تحميل البيانات...
         </div>
       ) : (
-        compareData.map((item, index) => <CompareBar key={index} label={item.label} value={item.value} color={item.color} isVisible={compareInView} />)
+        compareData.map((item, index) => (
+          <CompareBar key={index} label={item.label} value={item.value} color={item.color} isVisible={compareInView} />
+        ))
       )}
     </div>
   );
 };
+
 const CompareBar = ({ label, value, color, isVisible }) => {
   const [currentWidth, setCurrentWidth] = useState(0);
   useEffect(() => {
@@ -61,6 +76,7 @@ const CompareBar = ({ label, value, color, isVisible }) => {
       return () => clearTimeout(timer);
     }
   }, [value, isVisible]);
+
   return (
     <div className="compare-item">
       <div className="compare-top">
@@ -73,4 +89,5 @@ const CompareBar = ({ label, value, color, isVisible }) => {
     </div>
   );
 };
+
 export default ComparePlayersCard;

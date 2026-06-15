@@ -1,11 +1,8 @@
 import React, { useMemo } from "react";
-import { useTranslation } from "react-i18next";
 import { LineChart, Line, ResponsiveContainer, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
-import { useReport } from "../../../Context/ReportContext";
+import { useReport } from "../../../context/ReportContext";
 const monthsArabic = ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"];
-const monthsEnglish = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const PerformanceChart = ({ performanceInView }) => {
-  const { t, i18n } = useTranslation();
   const { allEvaluations, currentEvaluation, loading } = useReport();
   const performanceData = useMemo(() => {
     if (!allEvaluations?.length) return [];
@@ -23,7 +20,7 @@ const PerformanceChart = ({ performanceInView }) => {
       const key = `${year}-${monthIndex}`;
       if (!grouped[key]) {
         grouped[key] = {
-          month: i18n.language === "ar" ? monthsArabic[monthIndex] : monthsEnglish[monthIndex],
+          month: monthsArabic[monthIndex],
           year,
           scores: [],
           sortDate: new Date(year, monthIndex),
@@ -38,14 +35,18 @@ const PerformanceChart = ({ performanceInView }) => {
         month: item.month,
         value: Math.round(item.scores.reduce((sum, score) => sum + score, 0) / item.scores.length),
       }));
-  }, [allEvaluations, currentEvaluation, i18n.language]);
+  }, [allEvaluations, currentEvaluation]);
   return (
     <div className="chart-card">
-      <h3>{t("report.performanceChart.title")}</h3>
+      <h3>تطور التقييم العام</h3>
       {loading ? (
-        <div style={{ height: "300px", display: "flex", alignItems: "center", justifyContent: "center", color: "#64748b", fontWeight: "600" }}>{t("report.performanceChart.loading")}</div>
+        <div style={{ height: "300px", display: "flex", alignItems: "center", justifyContent: "center", color: "#64748b", fontWeight: "600" }}>
+          جاري تحميل البيانات...
+        </div>
       ) : performanceData.length === 0 ? (
-        <div style={{ height: "300px", display: "flex", alignItems: "center", justifyContent: "center", color: "#64748b", fontWeight: "600" }}>{t("report.performanceChart.noData")}</div>
+        <div style={{ height: "300px", display: "flex", alignItems: "center", justifyContent: "center", color: "#64748b", fontWeight: "600" }}>
+          لا توجد تقييمات حتى الآن
+        </div>
       ) : (
         <ResponsiveContainer width="100%" height={300}>
           {performanceInView ? (
@@ -57,9 +58,9 @@ const PerformanceChart = ({ performanceInView }) => {
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="0" vertical={false} stroke="#F4F7FE" />
-              <XAxis dataKey="month" axisLine={false} tickLine={false} padding={{ left: 15 }} tick={{ fill: "#A3AED0", fontSize: 12 }} />
+              <XAxis dataKey="month" axisLine={false} tickLine={false} tick={{ fill: "#A3AED0", fontSize: 12 }} />
               <YAxis domain={[0, 100]} axisLine={false} tickLine={false} tick={{ fill: "#A3AED0", fontSize: 12 }} />
-              <Tooltip formatter={(value) => [`${value}%`, t("report.performanceChart.score")]} contentStyle={{ borderRadius: "10px", border: "none", boxShadow: "0 4px 12px rgba(0,0,0,0.1)", textAlign: i18n.language === "ar" ? "right" : "left" }} />
+              <Tooltip contentStyle={{ borderRadius: "10px", border: "none", boxShadow: "0 4px 12px rgba(0,0,0,0.1)", textAlign: "right" }} />
               <Line type="monotone" dataKey="value" stroke="#4318ff" strokeWidth={3} dot={{ r: 5, fill: "#4318ff", stroke: "#fff" }} activeDot={{ r: 7 }} />
             </LineChart>
           ) : (

@@ -9,6 +9,7 @@
   padding: 24px;
   margin-top: 24px;
   box-shadow: 0 10px 35px rgba(15, 23, 42, 0.05);
+  direction: rtl;
   overflow: hidden;
 }
 

@@ -31,11 +31,12 @@
   font-size: 28px;
 }
 
-.green-text{
+.green-text {
   color: #22c55e !important;
 }
-.red-text{
-  color: #EF4444 !important;
+
+.red-text {
+  color: #ef4444 !important;
 }
 
 .stat-card span{
